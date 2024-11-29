@@ -9,27 +9,42 @@
 	<link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="w-[8rem] h-[36rem] flex flex-col rounded-lg">
-	<main class="flex flex-col h-full p-3 gap-10 w-full">
+<body class="w-[3rem] h-[36rem] flex flex-col rounded-lg">
+	<main class="flex flex-col h-full p-3 w-full">
 		<!-- <div id="app"></div> -->
 		<section>
-			<form class="" id="saveFavorites">
-				<label for="screener" id="screener_input_label" class="">Screener Name </label>
-				<input type="text" name="screener" id="screener" class="border-2 border-slate-600 rounded-lg" required>
+			<form id="tickerForm" class="flex gap-3 items-center justify-evenly">
+				<div class="flex justify-between items-center w-[16rem]">
+					<label for="ticker"> Ticker</label>
+					<input type="text" name="ticker" id="ticker" class="border-2 border-slate-600 rounded-lg h-8" required>
+				</div>
 				<p id="error-message"></p>
-				<button type="submit">+</button>
+				<button type="submit">🔍</button>
+			</form>
+		</section>
+		<section>
+			<form class="" id="favoritesForm">
+				<div class="flex justify-between items-center w-[13rem]">
+					<label for="screener" id="screener_input_label" class="">Screener</label>
+					<input type="text" name="screener" id="screener" class="border-2 border-slate-600 rounded-lg h-8" required>
+				</div>
+				<p id="error-message"></p>
+				<button type="submit" class="w/2">💾</button>
 			</form>
 		</section>
 		<section id="favorites_list" class="mt-3">
 			<h3 class="text-md underline-offset-2 my-3">watchlist</h3>
 			<ul id="list"></ul>
-		<button id="clear_list" type="button">clear list</button>
+			<button id="clear_list" type="button">clear list</button>
 		</section>
 	</main>
 	<footer class="self-start text-bold flex gap-10">
 		<a href="https://finviz.com/screener.ashx" target="_blank">Finviz Screener Link</a>
 		<ul>
-			<li>source code</li>
+			<li><a href="https://github.com/koloyyee/finviz_screener_saver" target="_blank">
+				source code
+			</a></li>
+
 		</ul>
 	</footer>
 </body>

@@ -10,6 +10,7 @@ export default defineConfig({
 		],
 		host_permissions : [
 			"https://finviz.com/screener.ashx?*"
-		]
+		],
+
 	}
 });
